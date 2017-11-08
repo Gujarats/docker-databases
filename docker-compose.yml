@@ -19,3 +19,11 @@ services :
     env_file: env/mysql.env
     container_name: mysql-docker
 
+  redis :
+    image: redis:4.0
+    volumes:
+      - /usr/local/redis:/data/
+    ports:
+      - 6379:6379
+    container_name: redis-docker
+
