@@ -5,7 +5,7 @@ services :
   mongo:
     image: mongo:3.4
     volumes:
-      - /usr/local/mongo
+      - /usr/local/mongo:/data/db
     ports:
       - 27017:27017
     container_name: mongo-docker
