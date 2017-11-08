@@ -1,0 +1,21 @@
+# From Mage Inferno Docker Compose (https://github.com/mageinferno/magento2-docker-compose)
+version: '2'
+
+services :
+  mongo:
+    image: mongo:3.4
+    volumes:
+      - /usr/local/mongo
+    ports:
+      - 27017:27017
+    container_name: mongo-docker
+
+  mysql : 
+    image: mysql:5.7
+    volumes:
+      - /usr/local/mysql:/var/lib/mysql
+    ports:
+      - 3306:3306
+    env_file: env/mysql.env
+    container_name: mysql-docker
+
